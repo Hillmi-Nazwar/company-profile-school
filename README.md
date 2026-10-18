@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Company Profile School
 
-## Getting Started
+Website company profile SMP modern dengan Next.js dan Tailwind CSS. Tampilan bersih dan tegas, animasi halus, dan pendaftaran siswa baru yang terhubung langsung ke WhatsApp tanpa database.
 
-First, run the development server:
+🚧 Status: dalam pengerjaan
 
-```bash
+🔗 Live Demo: segera hadir (isi dengan URL Vercel setelah deploy)
+
+Tampilkan Gambar
+
+<!-- Ganti dengan screenshot asli di akhir projek -->
+
+Catatan: "SMP Contoh" adalah sekolah fiktif untuk keperluan portofolio. Semua konten bersifat dummy.
+
+✨ Fitur
+ Navbar sticky (transparan lalu solid saat scroll) dan menu mobile
+ Hero section dengan CTA "Daftar Sekarang" dan "Chat WhatsApp"
+ Statistik dengan animasi angka naik
+ Tentang sekolah, sambutan kepala sekolah, dan visi misi
+ Program unggulan dan ekstrakurikuler
+ Galeri foto dengan lightbox
+ Timeline prestasi
+ Berita dan agenda (dari file data)
+ Alur PPDB (stepper 4 langkah)
+ Form pendaftaran yang mengirim pesan terformat ke WhatsApp
+ Testimoni, FAQ (accordion), kontak, dan peta
+ Tombol WhatsApp melayang
+ Responsif (mobile-first) dan SEO dasar
+🛠️ Tech Stack
+Kategori	Teknologi
+Framework	Next.js (App Router)
+Bahasa	TypeScript
+Styling	Tailwind CSS
+Animasi	Framer Motion
+Hosting	Vercel
+
+Tanpa database. Seluruh konten disimpan di satu file (src/data/content.ts), sehingga mengubah isi website cukup dengan mengedit file tersebut.
+
+📲 Cara Kerja Pendaftaran via WhatsApp
+Calon siswa mengisi form (nama, asal SD, nama orang tua, nomor HP).
+Data disusun menjadi pesan otomatis oleh JavaScript.
+Klik tombol kirim akan membuka WhatsApp ke nomor sekolah dengan pesan yang sudah terisi.
+
+Format link yang digunakan:
+
+https://wa.me/62812XXXXXXXX?text=<pesan-ter-encode>
+🚀 Menjalankan Secara Lokal
+
+Prasyarat: Node.js (versi LTS) dan Git.
+
+bash
+# 1. Clone repo
+git clone https://github.com/Hillmi-Nazwar/company-profile-school.git
+
+# 2. Masuk ke folder
+cd company-profile-school
+
+# 3. Install dependency
+npm install
+
+# 4. Jalankan development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka http://localhost:3000 di browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Script lain
+bash
+npm run build   # build untuk production
+npm run start   # jalankan hasil build
+npm run lint    # cek kualitas kode
+⚙️ Kustomisasi
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Semua konten (nama sekolah, nomor WhatsApp, program, galeri, dll.) ada di:
 
-## Learn More
+src/data/content.ts
 
-To learn more about Next.js, take a look at the following resources:
+Ganti isinya untuk menyesuaikan dengan sekolah atau client lain, tanpa menyentuh komponen.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+📁 Struktur Folder (rencana)
+company-profile-school/
+├── public/              # gambar dan aset statis
+├── src/
+│   ├── app/             # halaman dan layout (App Router)
+│   ├── components/      # komponen UI dan section
+│   └── data/            # content.ts (sumber konten)
+├── IDEAS.md             # parkiran ide untuk versi berikutnya
+└── README.md
+✅ Definition of Done
+ Semua section selesai
+ Responsif di HP, tablet, dan desktop
+ Tidak ada error di console
+ Skor Lighthouse 90+
+ README dan screenshot lengkap
+ Live di Vercel
+🗺️ Rencana Pengembangan (v2)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Di luar scope versi pertama, dicatat di IDEAS.md: dua bahasa (ID/EN), dark mode, dan rekap pendaftaran otomatis dengan database.
 
-## Deploy on Vercel
+👤 Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Hillmi Nazwar GitHub: @Hillmi-Nazwar
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📄 Lisensi
+
+Projek ini dibuat untuk keperluan portofolio dan pembelajaran.
